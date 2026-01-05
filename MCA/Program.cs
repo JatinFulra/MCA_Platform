@@ -1,6 +1,10 @@
+using MCA.Data;
+using MCA.Repository;
+using MCA.Repository.Interfaces;
+using MCA.Services;
+using MCA.Services.Interfaces;
 using Microsoft.EntityFrameworkCore;
 using System;
-using MCA.Data;
 
 
 var builder = WebApplication.CreateBuilder(args);
@@ -11,6 +15,8 @@ builder.Services.AddDbContext<AppDbContext>(options =>
         builder.Configuration.GetConnectionString("DefaultConnection")
     ));
 builder.Services.AddControllersWithViews();
+builder.Services.AddScoped<IContractRepository, ContractRepository>();
+builder.Services.AddScoped<IContractService, ContractService>();
 
 
 var app = builder.Build();

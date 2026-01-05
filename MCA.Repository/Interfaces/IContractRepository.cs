@@ -5,9 +5,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace MCA.Services.Interfaces
+namespace MCA.Repository.Interfaces
 {
-    public interface IContractService
+    public interface IContractRepository
     {
         Task<List<ContractModel>> GetContractsAsync();
     }

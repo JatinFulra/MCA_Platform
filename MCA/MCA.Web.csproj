@@ -16,6 +16,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\MCA.Data\MCA.Data.csproj" />
+    <ProjectReference Include="..\MCA.Services\MCA.Services.csproj" />
   </ItemGroup>
 
 </Project>
